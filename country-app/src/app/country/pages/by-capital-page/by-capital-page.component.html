@@ -1,4 +1,12 @@
 
-<app-search-input/>
+<app-search-input
+    placeholder="Buscar por capital"
+    (value)="query.set($event.trim())"
+/>
 
-<app-country-list/>
+<app-country-list
+    [countries]="countryResource.value() ?? []"
+    [errorMessage]="countryResource.error()"
+    [isEmpty]="countryResource.value()?.length === 0"
+    [isLoading]="countryResource.isLoading()"
+/>
