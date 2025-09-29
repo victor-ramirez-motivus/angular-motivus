@@ -2,6 +2,7 @@
 <app-search-input
     placeholder="Buscar por capital"
     (value)="query.set($event.trim())"
+    [debounceTime]="400"
 />
 
 <app-country-list
