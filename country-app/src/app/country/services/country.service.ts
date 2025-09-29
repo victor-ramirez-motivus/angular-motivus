@@ -48,7 +48,7 @@ export class CountryService {
 
     if (this.queryCacheCountry.has(query)) {
       return of(this.queryCacheCountry.get(query) ?? []).pipe(
-        delay(2000)
+        delay(0)
       );
     }
 

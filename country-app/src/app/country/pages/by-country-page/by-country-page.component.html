@@ -2,6 +2,7 @@
 <app-search-input 
     (value)="query.set($event.trim())"
     placeholder="Buscar por país"
+    [initialValue]="query()"
 />
 
 <app-country-list
